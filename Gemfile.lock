@@ -111,8 +111,6 @@ GEM
     erubi (1.9.0)
     excon (0.81.0)
     execjs (2.7.0)
-    faker (2.18.0)
-      i18n (>= 1.6, < 2)
     ffi (1.13.0)
     fog-aws (3.10.0)
       fog-core (~> 2.1)
@@ -325,7 +323,6 @@ DEPENDENCIES
   devise
   devise-bootstrap-views (~> 1.0)
   dotenv-rails
-  faker
   fog-aws
   font-awesome-sass (~> 5.15.1)
   jbuilder (~> 2.5)
