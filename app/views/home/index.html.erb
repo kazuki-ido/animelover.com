@@ -19,6 +19,8 @@
     <div class="col-6 mr-auto">
       <% if @first_post.picture.present? %>
         <%= image_tag @first_post.picture_url, class: "img-thumbnail img-responsive", onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
+      <% else %>
+        <%= image_tag "/images/post/default_posted_image.jpg" %>
       <% end %>
     </div>
   <% end %>
@@ -30,6 +32,8 @@
       <div class="row">
         <% if left_post.picture.present? %>
           <%= image_tag left_post.picture_url, class: "img-thumbnail img-responsive", onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
+        <% else %>
+          <%= image_tag "/images/post/default_posted_image.jpg" %>
         <% end %>
       </div>
       <div class="row h2">
@@ -47,6 +51,8 @@
         <div class="row">
           <% if right_post.picture.present? %>
             <%= image_tag right_post.picture_url, class: "img-thumbnail img-responsive", onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
+          <% else %>
+            <%= image_tag "/images/post/default_posted_image.jpg" %>
           <% end %>
         </div>
         <div class="row h2">

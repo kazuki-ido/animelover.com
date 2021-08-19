@@ -65,7 +65,11 @@
           <%= time_ago_in_locale(post.updated_at) %>
         </div>
       </div>
-      <%= image_tag post.picture_url(:thumb), onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' if post.picture.present? %>
+      <% if post.picture.present? %>
+        <%= image_tag post.picture_url(:thumb), onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
+      <% else %>
+        <%= image_tag "/images/post/default_posted_image.jpg" %>
+      <% end %>
     </div>
   <% end %>
 </div>
