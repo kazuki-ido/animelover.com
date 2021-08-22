@@ -18,7 +18,11 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= image_tag @post.picture_url, onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' if @post.picture.present? %>
+  <% if @post.picture.present? %>
+    <%= image_tag @post.picture_url, onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
+  <% else %>
+    <%= image_tag "/images/post/default_posted_image.jpg" %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

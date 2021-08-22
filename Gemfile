@@ -43,6 +43,9 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  gem 'rspec-rails', '~> 4.1.0'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
