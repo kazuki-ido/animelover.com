@@ -17,3 +17,10 @@
     password_confirmation: password
   )
 end
+
+User.all.each do |user|
+  user.posts.create!(
+    title: Faker::Lorem.characters(number: 10, min_alpha: 4),
+    content: Faker::Lorem.sentence(word_count: 3, supplemental: false, random_words_to_add: 4)
+  )
+end
