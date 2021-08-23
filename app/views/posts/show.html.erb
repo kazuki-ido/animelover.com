@@ -6,18 +6,15 @@
 
 <%= time_ago_in_words(@post.created_at) %>前
 
-<p>
-  <strong>Title:</strong>
+<p class="border-bottom border-primary">
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
   <% if @post.picture.present? %>
     <%= image_tag @post.picture_url, onerror: 'this.onerror=null;this.src="/images/user/image/s0041_30_0.jpg"' %>
   <% else %>
