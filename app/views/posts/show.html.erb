@@ -3,12 +3,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class="border-bottom border-primary">
-  <div class="h2">
+  <span class="h2">
     <%= @post.title %>
-  </div>
-  <div class="small text-right">
+  </span>
+  <span class="small text-right">
     <%= time_ago_in_words(@post.created_at) %>前
-  </div>
+  </span>
 </div>
 
 <p>
