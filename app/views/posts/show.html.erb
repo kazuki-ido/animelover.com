@@ -23,7 +23,7 @@
   <% end %>
 </p>
 
-<h2>いいね件数: <%= @post.likes.count %></h2>
+<p>いいね件数: <%= @post.likes.count %></p>
 <% if user_signed_in? %>
   <% if current_user.already_liked?(@post) %>
     <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
@@ -31,12 +31,12 @@
     <%= button_to 'いいね', post_likes_path(@post) %>
   <% end %>
 <% end %>
-<h2>いいねしたユーザー</h2>
+<p>いいねしたユーザー:</p>
 <% @post.liked_users.each do |user| %>
   <li><%= user.email %></li>
 <% end %>
 
-<h2>コメント</h2>
+<h5>コメント欄</h5>
 <% @post.comments.each do |comment| %>
   <p>
     <%= comment.commenter %>: <%= comment.body %>
@@ -47,14 +47,13 @@
   </p>
 <% end %>
 
-<h2>コメントを書く</h2>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <div class="field">
-    <%= f.label :commenter %><br />
+    <%= f.label :名前 %><br />
     <%= f.text_field :commenter %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label :本文 %><br />
     <%= f.text_area :body %>
   </div>
   <div class="actions">
